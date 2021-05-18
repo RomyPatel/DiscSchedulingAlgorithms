@@ -104,7 +104,7 @@
 
         <div class='practical'>
           <h2><u> Experiment</u></h2>
-          <?php include 'FCFSform.php'; ?>
+          <?php include 'FCFSForm.php'; ?>
         </div>
       </div>
       </section>
