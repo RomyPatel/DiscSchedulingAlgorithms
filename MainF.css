@@ -1,0 +1,1186 @@
+body {
+  font-family: "Century Gothic", "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* .tabs- intro section, .et-slide- 6 algo tabs */
+.tabs,
+.et-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background: #eee;
+}
+
+.tabs {
+  justify-content: center;
+}
+
+/* image */
+img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Disc scheduling algo- heading format */
+.text {
+  position: absolute;
+  top: 5em;
+  left: 60em;
+  justify-content: center;
+  padding: 1em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: right;
+}
+
+.text h1 {
+  font-size: 3rem;
+  color: white;
+  margin: 0;
+  letter-spacing: 0.4rem;
+}
+
+.text h1:nth-child(2) {
+  top: 5em;
+}
+
+/* authors list  */
+.authors p {
+  position: absolute;
+  top: 28em;
+  left: 15em;
+  color: white;
+  font-weight: bold;
+  text-align: right;
+}
+
+.authors li {
+  position: absolute;
+  list-style: none;
+  left: 15em;
+  color: white;
+}
+
+.authors li:nth-child(1) {
+  top: 31em;
+}
+.authors li:nth-child(2) {
+  top: 32.2em;
+}
+.authors li:nth-child(3) {
+  top: 33.4em;
+}
+.authors li:nth-child(4) {
+  top: 34.6em;
+}
+
+.tabs-container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  z-index: 10;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  color: #000;
+  letter-spacing: 0.1rem;
+  transition: all 0.5s ease;
+  font-size: 0.8rem;
+}
+.tab:hover {
+  color: white;
+  background: rgba(255, 128, 0, 0.8);
+  transition: all 0.5s ease;
+}
+#tab-slider {
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 6px;
+  background: rgba(255, 128, 0, 0.8);
+  transition: left 0.3s ease;
+}
+
+/* .et-slide heading */
+.heading {
+  position: relative;
+  background-color: rgba(255, 128, 0, 0.8);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  color: white;
+  width: 100%;
+  margin: 0 4em;
+  display: flex;
+  justify-content: center;
+}
+
+/* .et-slide section body */
+.sec_body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  padding: 4em 10em;
+}
+.sec_body > div {
+  flex: 1 1 100%;
+}
+
+.info {
+  background-color: rgba(220, 220, 220);
+  color: black;
+  width: 100%;
+  height: 100%;
+  box-shadow: 2px 4px 12px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 8em;
+  padding: 1em 1.5em;
+  text-align: justify;
+}
+.info p {
+  font-size: 1em;
+  margin: 0.2em 2em;
+  align-items: flex-start;
+  text-align: justify;
+}
+.info h3 {
+  font-size: 1.5em;
+  margin: 1em 1em 0 1em;
+  align-items: flex-start;
+}
+
+.nextInfo {
+  background-color: rgba(220, 220, 220);
+  color: black;
+  width: 100%;
+  height: 100%;
+  box-shadow: 2px 4px 12px 0 rgba(0, 0, 0, 0.2);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin: 8em;
+  padding: 2em 1.5em;
+  text-align: justify;
+}
+.nextInfo p {
+  font-size: 0.8em;
+  margin: 0em 2em;
+  align-items: flex-start;
+  text-align: justify;
+}
+.nextInfo h3 {
+  font-size: 1.5em;
+  margin: 0.5em 1em 0 1em;
+  align-items: flex-start;
+}
+.nextInfo h5 {
+  font-size: 1em;
+  margin: 0.3em 1.3em 0 1.3em;
+  align-items: flex-start;
+}
+
+.icon {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-self: flex-end;
+}
+
+.btn {
+  font-family: "Century Gothic", "Lato", sans-serif;
+  overflow: hidden;
+  outline: none;
+  background-color: rgba(255, 128, 0);
+  color: white;
+  border: 0.1em solid rgb(255, 128, 0) !important;
+  font-weight: bold;
+  font-size: 1em;
+  padding: 0.2em 1em;
+  margin: 1em 1.5em;
+  border: none;
+  border-radius: 1em;
+  cursor: pointer;
+  justify-content: flex-end;
+}
+.btn:hover {
+  background-color: transparent;
+  color: rgba(255, 128, 0, 0.8);
+  border: 0.1em solid rgba(255, 128, 0, 0.8);
+}
+
+/* diagram container */
+.diaContainer {
+  position: relative;
+  top: -3em;
+  height: 80%;
+  width: 90%;
+}
+
+/* line */
+.line {
+  position: relative;
+  top: 0;
+  left: -0.5em;
+  height: 0.5%;
+  width: 42em;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+}
+.line span {
+  position: absolute;
+  width: 0.2%;
+  height: 250%;
+  background-color: white;
+  color: white;
+}
+
+.line span:nth-child(1) {
+  left: 0;
+}
+.line span:nth-child(2) {
+  left: 8.4em;
+}
+.line span:nth-child(3) {
+  left: 28.56em;
+}
+.line span:nth-child(4) {
+  left: 33.6em;
+}
+.line span:nth-child(5) {
+  left: 41.16em;
+}
+.line span:nth-child(6) {
+  left: 42em;
+}
+
+/* 1st example */
+.example {
+  display: none;
+  position: relative;
+  width: 50%;
+  height: 81%;
+  background-color: black;
+  color: white;
+  box-shadow: 2px 4px 12px 0 rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  margin: 6em;
+  padding: 2em 1.5em;
+}
+.example button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.example p:nth-child(1) {
+  position: relative;
+  top: -2em;
+  left: -1em;
+}
+.example p:nth-child(2) {
+  position: relative;
+  top: -3em;
+  left: -1em;
+}
+.example p:nth-child(4) {
+  position: relative;
+  top: -5.4em;
+  left: -1em;
+}
+.example p:nth-child(5) {
+  position: absolute;
+  top: 20em;
+  left: 25em;
+  color: white;
+}
+.example p:nth-child(6) {
+  position: absolute;
+  top: 20em;
+  left: 29em;
+  color: black;
+  animation: bright 8s linear infinite;
+}
+.example p:nth-child(7) {
+  position: absolute;
+  top: 20em;
+  left: 33em;
+  color: black;
+  animation: bright 8s linear infinite;
+  animation-delay: 2s;
+}
+.example p:nth-child(8) {
+  position: absolute;
+  top: 20em;
+  left: 37em;
+  color: black;
+  animation: bright 8s linear infinite;
+  animation-delay: 4s;
+}
+.example p:nth-child(9) {
+  position: absolute;
+  top: 24em;
+  left: 0.5em;
+  color: black;
+  animation: bright 4s linear infinite;
+  animation-delay: 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.example p:nth-child(10) {
+  position: absolute;
+  top: 26em;
+  left: 0.5em;
+  color: black;
+  animation: bright 4s linear infinite;
+  animation-delay: 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes bright {
+  30% {
+    color: white;
+  }
+  100% {
+    color: white;
+  }
+}
+/* positions */
+.positions1 {
+  position: relative;
+  top: -2em;
+  left: -0.5em;
+  height: 0.5%;
+  width: 42em;
+  display: flex;
+  flex-direction: row;
+}
+.positions1 span {
+  position: absolute;
+  top: 0;
+  height: 250%;
+  width: 0.2%;
+  background-color: white;
+  color: white;
+}
+.positions1 span:nth-child(1) {
+  top: 4em;
+  left: 33.6em;
+  height: 0.1em;
+  width: 0;
+  border-radius: 10%;
+  transform: rotate(141deg);
+  transform-origin: 0 0;
+  transition: width 1s;
+  animation: animate1_1 8s linear infinite;
+}
+.positions1 span:nth-child(2) {
+  top: 8em;
+  left: 28.56em;
+  height: 0.1em;
+  width: 0;
+  border-radius: 10%;
+  transform: rotate(17.6deg);
+  transform-origin: 0 0;
+  transition: width 1s;
+  animation: animate1_2 8s linear infinite;
+}
+.positions1 span:nth-child(3) {
+  top: 12em;
+  left: 41.16em;
+  height: 0.1em;
+  width: 0;
+  border-radius: 10%;
+  transform: rotate(172.9deg);
+  transform-origin: 0 0;
+  transition: width 1s;
+  animation: animate1_3 8s linear infinite;
+}
+.positions1 span:nth-child(4) {
+  top: 16em;
+  left: 8.4em;
+  height: 0.1em;
+  width: 0;
+  border-radius: 10%;
+}
+@keyframes animate1_1 {
+  0% {
+    top: 4em;
+    left: 33.6em;
+    width: 0;
+  }
+  25% {
+    transform: rotate(141deg);
+    width: 6.5em;
+  }
+  100% {
+    transform: rotate(141deg);
+    width: 6.5em;
+  }
+}
+@keyframes animate1_2 {
+  25% {
+    top: 8em;
+    left: 28.56em;
+    width: 0;
+  }
+  50% {
+    transform: rotate(17.5deg);
+    width: 13.2em;
+  }
+  100% {
+    transform: rotate(17.5deg);
+    width: 13.2em;
+  }
+}
+@keyframes animate1_3 {
+  50% {
+    top: 12em;
+    left: 41.16em;
+    width: 0;
+  }
+  75% {
+    transform: rotate(172.9deg);
+    width: 33em;
+  }
+  100% {
+    transform: rotate(172.9deg);
+    width: 33em;
+  }
+}
+
+/*2nd example */
+/* positions */
+/* same as position1 */
+
+/*3rd example */
+.example_u {
+  display: none;
+  position: relative;
+  width: 50%;
+  height: 81%;
+  background-color: black;
+  color: white;
+  box-shadow: 2px 4px 12px 0 rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  margin: 6em;
+  padding: 2em 1.5em;
+}
+.example_u button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.example_u p:nth-child(1) {
+  position: relative;
+  top: -2em;
+  left: -1em;
+}
+.example_u p:nth-child(2) {
+  position: relative;
+  top: -3em;
+  left: -1em;
+}
+.example_u p:nth-child(4) {
+  position: relative;
+  top: -5.4em;
+  left: -1em;
+}
+.example_u p:nth-child(5) {
+  position: absolute;
+  top: 20em;
+  left: 25em;
+  color: white;
+}
+.example_u p:nth-child(6) {
+  position: absolute;
+  top: 20em;
+  left: 29em;
+  color: black;
+  animation: bright 8s linear infinite;
+}
+.example_u p:nth-child(7) {
+  position: absolute;
+  top: 20em;
+  left: 33em;
+  color: black;
+  animation: bright 8s linear infinite;
+  animation-delay: 2s;
+}
+.example_u p:nth-child(8) {
+  position: absolute;
+  top: 20em;
+  left: 37em;
+  color: black;
+  animation: bright 8s linear infinite;
+  animation-delay: 3.5s;
+}
+.example_u p:nth-child(9) {
+  position: absolute;
+  top: 20em;
+  left: 41em;
+  color: black;
+  animation: bright 8s linear infinite;
+  animation-delay: 5s;
+}
+.example_u p:nth-child(10) {
+  position: absolute;
+  top: 24em;
+  left: 0.5em;
+  color: black;
+  animation: bright 4s linear infinite;
+  animation-delay: 7s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.example_u p:nth-child(11) {
+  position: absolute;
+  top: 26em;
+  left: 0.5em;
+  color: black;
+  animation: bright 4s linear infinite;
+  animation-delay: 7s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+/* positions */
+.positions3 {
+  position: relative;
+  top: -2.5em;
+  left: -0.5em;
+  height: 0.5%;
+  width: 42em;
+  display: flex;
+  flex-direction: row;
+}
+.positions3 span {
+  position: absolute;
+  top: 0;
+  height: 250%;
+  width: 0.2%;
+  background-color: white;
+  color: white;
+}
+.positions3 span:nth-child(1) {
+  top: 4em;
+  left: 33.6em;
+  height: 0.1em;
+  width: 0;
+  border-radius: 10%;
+  transform: rotate(14.9deg);
+  transform-origin: 0 0;
+  transition: width 1s;
+  animation: animate3_1 8s linear infinite;
+}
+.positions3 span:nth-child(2) {
+  top: 6em;
+  left: 41.16em;
+  height: 0.1em;
+  width: 0;
+  border-radius: 10%;
+  transform: rotate(65deg);
+  transform-origin: 0 0;
+  transition: width 1s;
+  animation: animate3_2 8s linear infinite;
+}
+.positions3 span:nth-child(3) {
+  top: 8em;
+  left: 42em;
+  height: 0.1em;
+  width: 0;
+  border-radius: 10%;
+  transform: rotate(171.5deg);
+  transform-origin: 0 0;
+  transition: width 1s;
+  animation: animate3_3 8s linear infinite;
+}
+.positions3 span:nth-child(4) {
+  top: 10em;
+  left: 28.56em;
+  height: 0.1em;
+  width: 0;
+  border-radius: 10%;
+  transform: rotate(174.2deg);
+  transform-origin: 0 0;
+  transition: width 1s;
+  animation: animate3_4 8s linear infinite;
+}
+.positions3 span:nth-child(5) {
+  top: 12em;
+  left: 8.4em;
+  height: 0.1em;
+  width: 0;
+  border-radius: 10%;
+}
+@keyframes animate3_1 {
+  0% {
+    top: 4em;
+    left: 33.6em;
+    width: 0;
+  }
+  20% {
+    transform: rotate(14.9deg);
+    width: 7.8em;
+  }
+  100% {
+    transform: rotate(14.9deg);
+    width: 7.8em;
+  }
+}
+@keyframes animate3_2 {
+  20% {
+    top: 6em;
+    left: 41.16em;
+    width: 0;
+  }
+  40% {
+    transform: rotate(65deg);
+    width: 2.2em;
+  }
+  100% {
+    transform: rotate(65deg);
+    width: 2.2em;
+  }
+}
+@keyframes animate3_3 {
+  40% {
+    top: 8em;
+    left: 42em;
+    width: 0;
+  }
+  60% {
+    transform: rotate(171.5deg);
+    width: 13.7em;
+  }
+  100% {
+    transform: rotate(171.5deg);
+    width: 13.7em;
+  }
+}
+@keyframes animate3_4 {
+  60% {
+    top: 10em;
+    left: 28.56em;
+    width: 0;
+  }
+  80% {
+    transform: rotate(174.2deg);
+    width: 20.3em;
+  }
+  100% {
+    transform: rotate(174.2deg);
+    width: 20.3em;
+  }
+}
+
+/*4th example */
+.example_u2 {
+  display: none;
+  position: relative;
+  width: 50%;
+  height: 81%;
+  background-color: black;
+  color: white;
+  box-shadow: 2px 4px 12px 0 rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  margin: 6em;
+  padding: 2em 1.5em;
+}
+.example_u2 button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.example_u2 p:nth-child(1) {
+  position: relative;
+  top: -2em;
+  left: -1em;
+}
+.example_u2 p:nth-child(2) {
+  position: relative;
+  top: -3em;
+  left: -1em;
+}
+.example_u2 p:nth-child(4) {
+  position: relative;
+  top: -5em;
+  left: -1em;
+}
+.example_u2 p:nth-child(5) {
+  position: absolute;
+  top: 20.5em;
+  left: 25em;
+  color: white;
+}
+.example_u2 p:nth-child(6) {
+  position: absolute;
+  top: 20.5em;
+  left: 28em;
+  color: black;
+  animation: bright 8s linear infinite;
+}
+.example_u2 p:nth-child(7) {
+  position: absolute;
+  top: 20.5em;
+  left: 31em;
+  color: black;
+  animation: bright 8s linear infinite;
+  animation-delay: 2s;
+}
+.example_u2 p:nth-child(8) {
+  position: absolute;
+  top: 20.5em;
+  left: 34em;
+  color: black;
+  animation: bright 8s linear infinite;
+  animation-delay: 3s;
+}
+.example_u2 p:nth-child(9) {
+  position: absolute;
+  top: 20.5em;
+  left: 37em;
+  color: black;
+  animation: bright 8s linear infinite;
+  animation-delay: 4s;
+}
+.example_u2 p:nth-child(10) {
+  position: absolute;
+  top: 20.5em;
+  left: 40em;
+  color: black;
+  animation: bright 8s linear infinite;
+  animation-delay: 6s;
+}
+.example_u2 p:nth-child(11) {
+  position: absolute;
+  top: 24em;
+  left: 0.5em;
+  color: black;
+  animation: bright 4s linear infinite;
+  animation-delay: 7s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.example_u2 p:nth-child(12) {
+  position: absolute;
+  top: 26em;
+  left: 0.5em;
+  color: black;
+  animation: bright 4s linear infinite;
+  animation-delay: 7s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+/* positions */
+.positions4 {
+  position: relative;
+  top: -2.5em;
+  left: -0.5em;
+  height: 0.5%;
+  width: 42em;
+  display: flex;
+  flex-direction: row;
+}
+.positions4 span {
+  position: absolute;
+  top: 0;
+  height: 250%;
+  width: 0.2%;
+  background-color: white;
+  color: white;
+}
+.positions4 span:nth-child(1) {
+  top: 4em;
+  left: 33.6em;
+  height: 0.1em;
+  width: 0;
+  border-radius: 10%;
+  transform: rotate(14.9deg);
+  transform-origin: 0 0;
+  transition: width 1s;
+  animation: animate4_1 8s linear infinite;
+}
+.positions4 span:nth-child(2) {
+  top: 6em;
+  left: 41.16em;
+  height: 0.1em;
+  width: 0;
+  border-radius: 10%;
+  transform: rotate(65deg);
+  transform-origin: 0 0;
+  transition: width 1s;
+  animation: animate4_2 8s linear infinite;
+}
+.positions4 span:nth-child(3) {
+  top: 8em;
+  left: 42em;
+  height: 0.1em;
+  width: 0;
+  border-radius: 10%;
+  transform: rotate(174.5deg);
+  transform-origin: 0 0;
+  transition: width 1s;
+  animation: animate4_3 8s linear infinite;
+}
+.positions4 span:nth-child(4) {
+  top: 12em;
+  left: 0;
+  height: 0.1em;
+  width: 0;
+  border-radius: 10%;
+  transform: rotate(13.5deg);
+  transform-origin: 0 0;
+  transition: width 1s;
+  animation: animate4_4 8s linear infinite;
+}
+.positions4 span:nth-child(5) {
+  top: 14em;
+  left: 8.4em;
+  height: 0.1em;
+  width: 0;
+  border-radius: 10%;
+  transform: rotate(5.55deg);
+  transform-origin: 0 0;
+  transition: width 1s;
+  animation: animate4_5 8s linear infinite;
+}
+.positions4 span:nth-child(6) {
+  top: 16em;
+  left: 28.56em;
+  height: 0.1em;
+  width: 0;
+  border-radius: 10%;
+}
+@keyframes animate4_1 {
+  0% {
+    top: 4em;
+    left: 33.6em;
+    width: 0;
+  }
+  20% {
+    transform: rotate(14.9deg);
+    width: 7.8em;
+  }
+  100% {
+    transform: rotate(14.9deg);
+    width: 7.8em;
+  }
+}
+@keyframes animate4_2 {
+  20% {
+    top: 6em;
+    left: 41.16em;
+    width: 0;
+  }
+  40% {
+    transform: rotate(65deg);
+    width: 2.2em;
+  }
+  100% {
+    transform: rotate(65deg);
+    width: 2.2em;
+  }
+}
+@keyframes animate4_3 {
+  40% {
+    top: 8em;
+    left: 42em;
+    width: 0;
+  }
+  50% {
+    transform: rotate(174.5deg);
+    width: 42.1em;
+  }
+  100% {
+    transform: rotate(174.5deg);
+    width: 42.1em;
+  }
+}
+@keyframes animate4_4 {
+  50% {
+    top: 12em;
+    left: 0;
+    width: 0;
+  }
+  70% {
+    transform: rotate(13.5deg);
+    width: 8.6em;
+  }
+  100% {
+    transform: rotate(13.5deg);
+    width: 8.6em;
+  }
+}
+@keyframes animate4_5 {
+  70% {
+    top: 14em;
+    left: 8.4em;
+    width: 0;
+  }
+  90% {
+    transform: rotate(5.55deg);
+    width: 20.4em;
+  }
+  100% {
+    transform: rotate(5.55deg);
+    width: 20.4em;
+  }
+}
+
+/*5th example */
+/* positions */
+.positions5 {
+  position: relative;
+  top: -2em;
+  left: -0.5em;
+  height: 0.5%;
+  width: 42em;
+  display: flex;
+  flex-direction: row;
+}
+.positions5 span {
+  position: absolute;
+  top: 0;
+  height: 250%;
+  width: 0.2%;
+  background-color: white;
+  color: white;
+}
+.positions5 span:nth-child(1) {
+  top: 4em;
+  left: 33.6em;
+  height: 0.1em;
+  width: 0;
+  border-radius: 10%;
+  transform: rotate(27deg);
+  transform-origin: 0 0;
+  transition: width 1s;
+  animation: animate5_1 8s linear infinite;
+}
+.positions5 span:nth-child(2) {
+  top: 8em;
+  left: 41.16em;
+  height: 0.1em;
+  width: 0;
+  border-radius: 10%;
+  transform: rotate(162.5deg);
+  transform-origin: 0 0;
+  transition: width 1s;
+  animation: animate5_2 8s linear infinite;
+}
+.positions5 span:nth-child(3) {
+  top: 12em;
+  left: 28.56em;
+  height: 0.1em;
+  width: 0;
+  border-radius: 10%;
+  transform: rotate(168.5deg);
+  transform-origin: 0 0;
+  transition: width 1s;
+  animation: animate5_3 8s linear infinite;
+}
+.positions5 span:nth-child(4) {
+  top: 16em;
+  left: 8.4em;
+  height: 0.1em;
+  width: 0;
+  border-radius: 10%;
+}
+@keyframes animate5_1 {
+  0% {
+    top: 4em;
+    left: 33.6em;
+    width: 0;
+  }
+  25% {
+    transform: rotate(27deg);
+    width: 8.5em;
+  }
+  100% {
+    transform: rotate(27deg);
+    width: 8.5em;
+  }
+}
+@keyframes animate5_2 {
+  25% {
+    top: 8em;
+    left: 41.16em;
+    width: 0;
+  }
+  50% {
+    transform: rotate(162.5deg);
+    width: 13.2em;
+  }
+  100% {
+    transform: rotate(162.5deg);
+    width: 13.2em;
+  }
+}
+@keyframes animate5_3 {
+  50% {
+    top: 12em;
+    left: 28.56em;
+    width: 0;
+  }
+  75% {
+    transform: rotate(168.5deg);
+    width: 20.5em;
+  }
+  100% {
+    transform: rotate(168.5deg);
+    width: 20.5em;
+  }
+}
+
+/*6th example */
+/* positions */
+.positions6 {
+  position: relative;
+  top: -2em;
+  left: -0.5em;
+  height: 0.5%;
+  width: 42em;
+  display: flex;
+  flex-direction: row;
+}
+.positions6 span {
+  position: absolute;
+  top: 0;
+  height: 250%;
+  width: 0.2%;
+  background-color: white;
+  color: white;
+}
+.positions6 span:nth-child(1) {
+  top: 4em;
+  left: 33.6em;
+  height: 0.1em;
+  width: 0;
+  border-radius: 10%;
+  transform: rotate(27deg);
+  transform-origin: 0 0;
+  transition: width 1s;
+  animation: animate6_1 8s linear infinite;
+}
+.positions6 span:nth-child(2) {
+  top: 8em;
+  left: 41.16em;
+  height: 0.1em;
+  width: 0;
+  border-radius: 10%;
+  transform: rotate(172.9deg);
+  transform-origin: 0 0;
+  transition: width 1s;
+  animation: animate6_2 8s linear infinite;
+}
+.positions6 span:nth-child(3) {
+  top: 12em;
+  left: 8.4em;
+  height: 0.1em;
+  width: 0;
+  border-radius: 10%;
+  transform: rotate(11.2deg);
+  transform-origin: 0 0;
+  transition: width 1s;
+  animation: animate6_3 8s linear infinite;
+}
+.positions6 span:nth-child(4) {
+  top: 16em;
+  left: 28.56em;
+  height: 0.1em;
+  width: 0;
+  border-radius: 10%;
+}
+@keyframes animate6_1 {
+  0% {
+    top: 4em;
+    left: 33.6em;
+    width: 0;
+  }
+  25% {
+    transform: rotate(27deg);
+    width: 8.5em;
+  }
+  100% {
+    transform: rotate(27deg);
+    width: 8.5em;
+  }
+}
+@keyframes animate6_2 {
+  25% {
+    top: 8em;
+    left: 41.16em;
+    width: 0;
+  }
+  50% {
+    transform: rotate(172.9deg);
+    width: 33em;
+  }
+  100% {
+    transform: rotate(172.9deg);
+    width: 33em;
+  }
+}
+@keyframes animate6_3 {
+  50% {
+    top: 12em;
+    left: 8.4em;
+    width: 0;
+  }
+  75% {
+    transform: rotate(11.2deg);
+    width: 20.6em;
+  }
+  100% {
+    transform: rotate(11.2deg);
+    width: 20.6em;
+  }
+}
+
+.practical {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.practical h2 {
+  margin: 0 4em 2em 4em;
+}
+
+@media (min-width: 800px) {
+  .tabs,
+  .et-slide {
+    h1 {
+      font-size: 3rem;
+    }
+  }
+  .tab {
+    font-size: 1rem;
+  }
+}
